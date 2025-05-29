@@ -1,5 +1,5 @@
-streamlit
-numpy
+streamlit==1.45.1
+numpy<2
 pandas
 scikit-learn
 opencv-python
