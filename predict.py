@@ -32,12 +32,14 @@ def predict_page():
     with col1:
         if st.button("🔙 Back to Dashboard", key="back_dashboard"):
             st.session_state.page = "dashboard"
-            st.rerun()
+            st.experimental_rerun()
+
     with col2:
         if st.button("🔓 Logout", key="logout"):
             st.session_state.logged_in = False
             st.session_state.page = "login"
-            st.rerun()
+            st.experimental_rerun()
+
 
     st.markdown("---")
 
