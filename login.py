@@ -41,6 +41,7 @@ def login_signup():
                     json.dump(users, f)
                 st.success("Account created! Please login.")
                 st.session_state.page = "login"
+                st.experimental_rerun()
                  # To reload app and move to login page
 
     else:
@@ -54,6 +55,7 @@ def login_signup():
                 st.success(f"Welcome back, {user['name']}!")
                 st.session_state.username = user["name"]
                 st.session_state.page = "dashboard"
+                st.experimental_rerun()
                   # Refresh app to dashboard
             else:
                 st.error("Invalid credentials.")

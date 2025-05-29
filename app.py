@@ -9,6 +9,14 @@ if "logged_in" not in st.session_state:
 if "page" not in st.session_state:
     st.session_state.page = "login"
 
+# Page routing
+if st.session_state.page == "login":
+    login_signup()
+elif st.session_state.page == "dashboard":
+    dashboard_page()
+elif st.session_state.page == "predict":
+    predict_page()
+
 # Sidebar navigation
 def sidebar():
     st.sidebar.title("📋 Navigation")
@@ -31,10 +39,4 @@ def logout():
 # Display sidebar
 sidebar()
 
-# Page routing
-if st.session_state.page == "login":
-    login_signup()
-elif st.session_state.page == "dashboard":
-    dashboard_page()
-elif st.session_state.page == "predict":
-    predict_page()
+

@@ -28,7 +28,7 @@ def predict_page():
     st.title("🩻 Pneumonia Detector")
 
     # Navigation buttons
-    col1, col2 = st.columns([1,1])
+    col1, col2 = st.columns(2)
     with col1:
         if st.button("🔙 Back to Dashboard", key="back_dashboard"):
             st.session_state.page = "dashboard"
