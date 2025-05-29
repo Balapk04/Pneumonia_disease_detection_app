@@ -59,7 +59,7 @@ def predict_page():
         uploaded_file = st.file_uploader("Upload Chest X-ray Image", type=["jpg", "jpeg", "png"])
         if uploaded_file:
             uploaded_image = Image.open(uploaded_file).convert("RGB")
-            st.image(uploaded_image, caption="Uploaded X-ray Image", use_container_width=True)
+            st.image(uploaded_image, caption="Uploaded X-ray Image")
 
     else:
         st.info("📸 Please take the picture of the X-ray in **good lighting** and ensure the full image is visible.")
