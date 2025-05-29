@@ -1,11 +1,11 @@
-streamlit==1.45.1
+streamlit==1.22.0
 numpy<2
 pandas
 scikit-learn
 opencv-python
 tensorflow==2.11.0
+protobuf==3.19.6
 matplotlib
 Pillow
 torch==2.0.1
 torchvision==0.15.2
-
