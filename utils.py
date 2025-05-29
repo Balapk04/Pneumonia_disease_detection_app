@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from PIL import Image
-from torchvision import DenseNet_Weights
+from torchvision import models
 
 CLASS_NAMES = ['Bacterial Pneumonia', 'Normal', 'Pneumonia', 'Viral Pneumonia']
 
