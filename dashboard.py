@@ -12,6 +12,7 @@ def dashboard_page():
 
     if st.button("➡️ Go to Prediction Page"):
         st.session_state.page = "predict"
+        st.experimental_rerun()
 
 
     

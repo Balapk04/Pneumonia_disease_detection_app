@@ -3,12 +3,12 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from PIL import Image
-from torchvision import models
+from torchvision import DenseNet_Weights
 
 CLASS_NAMES = ['Bacterial Pneumonia', 'Normal', 'Pneumonia', 'Viral Pneumonia']
 
 def load_model(model_path):
-    model = models.densenet121(pretrained=False)
+    model = models.densenet121(weights=None)
     num_ftrs = model.classifier.in_features
     model.classifier = nn.Linear(num_ftrs, len(CLASS_NAMES))
     model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
